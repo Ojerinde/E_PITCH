@@ -5,7 +5,7 @@ const About = () => {
     <div className={classes.box}>
       <div>Hi, my name is Joel,</div>
       <p>
-        I am learning Full Stack Developement and I am a student of University of Ilorin
+        I am learning Full Stack Developement and I am also a student of University of Ilorin
         where I am studying Electrical and Electronics Engineering.
       </p>
       <p>
