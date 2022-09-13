@@ -5,7 +5,7 @@ import {
   auth,
   provider,
   signInWithRedirect,
-  getRedirectResult,
+//   getRedirectResult,
   onAuthStateChanged
 } from "../config";
 import { useEffect } from "react";
