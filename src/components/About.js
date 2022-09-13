@@ -1,16 +1,28 @@
 import classes from "./About.module.css";
-
-const About = () => {
+import { auth, signOut } from "../config";
+const About = (props) => {
+  const logoutHandler = () => {
+    signOut(auth)
+      .then(() => {
+        console.log(false);
+        props.onSign(false);
+      })
+      .catch((error) => {
+        props.onSign(true);
+        console.log(error);
+      });
+  };
   return (
     <div className={classes.box}>
       <div>Hi, my name is Joel,</div>
       <p>
-        I am learning Full Stack Developement and I am also a student of University of Ilorin
-        where I am studying Electrical and Electronics Engineering.
+        I am learning Full Stack Developement and I am also a student of
+        University of Ilorin where I am studying Electrical and Electronics
+        Engineering.
       </p>
       <p>
-        I am studying Frontend engineering at AltSchool Africa and
-        Full Stack development at Udacity University.
+        I am studying Frontend engineering at AltSchool Africa and Full Stack
+        development at Udacity University.
       </p>
       <p>
         I recently built an API around RESTful concepts which I used to connect
@@ -23,6 +35,9 @@ const About = () => {
         problems.
       </p>
       <div> What about you?</div>
+      <button className={classes.button} onClick={logoutHandler}>
+        Sign Out
+      </button>
     </div>
   );
 };

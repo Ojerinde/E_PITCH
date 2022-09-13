@@ -1,0 +1,21 @@
+.box {
+    margin: 0 auto;
+    text-align: center;
+    color: #333;
+}
+.div {
+    font-size: 2.3rem;
+    margin-bottom: 1rem;
+}
+.button {
+    border: .1rem solid brown;
+    padding: .6rem .8rem;
+    border-radius: .5rem;
+    color: brown;
+    background-color: #eee;
+    cursor: pointer;
+}
+.button:hover {
+    background-color: rgb(213, 208, 208);
+
+}
